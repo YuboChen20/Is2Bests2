@@ -122,7 +122,7 @@ public class HistorialGUI extends JFrame {
 			}
 		});
 		
-		
+		 
 		JScrollPane scrollPaneUserBlo = new JScrollPane();
 		scrollPaneUserBlo.setBounds(14, 51, 328, 246);
 		contentPane.add(scrollPaneUserBlo);
@@ -208,7 +208,7 @@ public class HistorialGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int i=tableUser.getSelectedRow();
 				int j=tableUser.getRowCount();
-				if(i>=0 & j>0) {
+				if(i>=0 && j>0) {
 					String s= (String) jComboBoxTipoUsers.getSelectedItem();
 					String s2= (String) jcbUserAdmin.getSelectedItem(); 
 					BLFacade facade = MainGUI.getBusinessLogic();
