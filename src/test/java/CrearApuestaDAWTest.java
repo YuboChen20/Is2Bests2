@@ -56,7 +56,7 @@ public class CrearApuestaDAWTest {
 			testDA.close();
 		
 			//invoke System Under Test (sut)  
-			sut.anadirApuesta(u, b);
+			sut.añadirApuesta(u, b);
 			int num = sut.crearApuesta(u, 10, p);
 			assertEquals(0,num);
 		}catch(Exception e) {
@@ -105,7 +105,7 @@ public class CrearApuestaDAWTest {
 			testDA.close();
 		
 			//invoke System Under Test (sut)  
-			sut.anadirApuesta(u, b);
+			sut.añadirApuesta(u, b);
 			int num = sut.crearApuesta(u, 10, p);
 			assertEquals(0,num);
 		}catch(Exception e) {
