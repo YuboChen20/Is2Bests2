@@ -39,7 +39,7 @@ public class DataAccess  {
 
 
 	ConfigXML c=ConfigXML.getInstance();
-
+ 
      public DataAccess(boolean initializeMode)  {
 		
 		System.out.println("Creating DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
@@ -64,11 +64,11 @@ public class DataAccess  {
 			Liga ligaSantander=new Liga("Liga Santander",20);
 			Liga premierLeague=new Liga("Premier League",20);
 			
-			Equipo atleticoDeMadrid= new Equipo("Atlético de Madrid", ligaSantander);
+			Equipo atleticoDeMadrid= new Equipo("Atletico de Madrid", ligaSantander);
 			Equipo atlheticDeBilbao= new Equipo("Athletic de Bilbao", ligaSantander);
 			Equipo barcelona= new Equipo("Barcelona", ligaSantander);
-			Equipo cadiz= new Equipo("Cádiz", ligaSantander);
-			Equipo alaves= new Equipo("Alavés", ligaSantander);
+			Equipo cadiz= new Equipo("Cadiz", ligaSantander);
+			Equipo alaves= new Equipo("Alaves", ligaSantander);
 			Equipo celtaDeVigo= new Equipo("Celta de Vigo", ligaSantander);
 			Equipo elche= new Equipo("Elche", ligaSantander);
 			Equipo espanyol= new Equipo("Espanyol", ligaSantander);
@@ -98,57 +98,57 @@ public class DataAccess  {
 		   	db.persist(no1);
 		   	db.persist(no2);
 		   	String titulo3="Seis jugadores del Sevilla, nominados al once de LaLiga";
-		   	String subTitulo3="Bono, Jesús Navas, Koundé, Diego Carlos, Acuña y Joan Jordán optan al reconocimiento entre más de 45 futbolistas";
-		   	String texto3="Seis jugadores del Sevilla han sido nominados por LaLiga para la elección del mejor once de la temporada 21-22, premios que se entregarán en una gala que será presidida por Javier Tebas. A través de la aplicación Player App, los aficionados al fútbol podrán votar a los mejores jugadores de la Liga entre un total de 46 futbolistas de todos los equipos que conforman la Liga Santander. Además, un comité de expertos formado por periodistas también participará en la votación.\n"
+		   	String subTitulo3="Bono, Jesus Navas, Kounde, Diego Carlos, Acuna y Joan Jordan optan al reconocimiento entre mas de 45 futbolistas";
+		   	String texto3="Seis jugadores del Sevilla han sido nominados por LaLiga para la eleccion del mejor once de la temporada 21-22, premios que se entregaran en una gala que sera presidida por Javier Tebas. A traves de la aplicacion Player App, los aficionados al futbol podran votar a los mejores jugadores de la Liga entre un total de 46 futbolistas de todos los equipos que conforman la Liga Santander. Ademas, un comite de expertos formado por periodistas tambien participara en la votacion.\n"
 		   			+ "\n"
-		   			+ "Bono, Jesús Navas, Koundé, Diego Carlos, Acuña, Joan Jordán optan a formar parte de este once de estrellas a los que acompañarán los cuatro siguientes jugadores más votados.\n"
+		   			+ "Bono, Jesus Navas, Kounde, Diego Carlos, Acuna, Joan Jordan optan a formar parte de este once de estrellas a los que acompanaran los cuatro siguientes jugadores mas votados.\n"
 		   			+ "\n"
 		   			+ "La lista completa de nominados la forman los siguientes futbolistas:\n"
 		   			+ "\n"
-		   			+ "-Porteros: Yassine Bounou (Sevilla FC); Thibaut Courtois (Real Madrid); Gero Rulli (Villarreal CF); Diego López (RCD Espanyol); Jan Oblak (Atlético de Madrid) y Matías Dituro (Celta de Vigo).\n"
+		   			+ "-Porteros: Yassine Bounou (Sevilla FC); Thibaut Courtois (Real Madrid); Gero Rulli (Villarreal CF); Diego Lopez (RCD Espanyol); Jan Oblak (Atletico de Madrid) y Matias Dituro (Celta de Vigo).\n"
 		   			+ "\n"
-		   			+ "-Defensas: Jordi Alba (FC Barcelona); Militao (Real Madrid); Marcos Acuña (Sevilla); Ronald Araújo (Barcelona); Le Normand (Real Sociedad); David García (CA Osasuna); Alaba (Real Madrid); Álex Moreno (Real Betis); Íñigo Martínez (Athletic Club); Diego Carlos (Sevilla); Kounde (Sevilla) y Jesús Navas (Sevilla).\n"
+		   			+ "-Defensas: Jordi Alba (FC Barcelona); Militao (Real Madrid); Marcos AcuNa (Sevilla); Ronald Araujo (Barcelona); Le Normand (Real Sociedad); David Garcia (CA Osasuna); Alaba (Real Madrid); alex Moreno (Real Betis); inigo Martinez (Athletic Club); Diego Carlos (Sevilla); Kounde (Sevilla) y Jesus Navas (Sevilla).\n"
 		   			+ "\n"
-		   			+ "-Centrocampistas: Kroos (Real Madrid); Casemiro (Real Madrid); Joan Jordán (Sevilla); Fekir (Betis); Muniain (Athletic Club); Modric (Real Madrid); Juanmi (Betis); Mikel Merino (Real Sociedad); Carlos Soler (Valencia CF); Canales (Betis); Lemar (Atlético de Madrid); Pedri (Barcelona); Trejo (Rayo Vallecano); Brais Méndez (Celta); Capoué (Villareal); Yeremi Pino (Villareal) y Frenkie De Jong (Barcelona).\n"
+		   			+ "-Centrocampistas: Kroos (Real Madrid); Casemiro (Real Madrid); Joan Jordan (Sevilla); Fekir (Betis); Muniain (Athletic Club); Modric (Real Madrid); Juanmi (Betis); Mikel Merino (Real Sociedad); Carlos Soler (Valencia CF); Canales (Betis); Lemar (Atletico de Madrid); Pedri (Barcelona); Trejo (Rayo Vallecano); Brais Mendez (Celta); Capoue (Villareal); Yeremi Pino (Villareal) y Frenkie De Jong (Barcelona).\n"
 		   			+ "\n"
-		   			+ "-Delanteros: Benzema (Real Madrid); Vini Jr (Real Madrid); Aspas (Celta); Joao Félix (Atlético de Madrid); Mikel Oyarzabal (Real Sociedad); Joselu (Deportivo Alavés); Raul de Tomás (Espanyol); Enes Ünal (Getafe CF); Ángel Correa (Atlético de Madrid); Guedes (Valencia) y Borja Iglesias (Betis).";
-		   	Noticia no3 =new Noticia(titulo3, subTitulo3, texto3, "JUAN PELEGRÍN", "MUNDODEPORTIVO", UtilDate.newDate(year,month,18));
+		   			+ "-Delanteros: Benzema (Real Madrid); Vini Jr (Real Madrid); Aspas (Celta); Joao Felix (Atletico de Madrid); Mikel Oyarzabal (Real Sociedad); Joselu (Deportivo Alaves); Raul de Tomas (Espanyol); Enes Ünal (Getafe CF); angel Correa (Atletico de Madrid); Guedes (Valencia) y Borja Iglesias (Betis).";
+		   	Noticia no3 =new Noticia(titulo3, subTitulo3, texto3, "JUAN PELEGRiN", "MUNDODEPORTIVO", UtilDate.newDate(year,month,18));
 		   	db.persist(no3);
 		   	
-		   	String titulo4="Alberto De la Bella anuncia su retirada del fútbol profesional";
-		   	String subTitulo4="El lateral zurdo, ex de la Real Sociedad y ahora en el Cartagena, cuelga las botas a los 36 años";
-		   	String texto4="Una de las muchas leyendas que ha tenido la Real Sociedad,Alberto de la Bella, da un paso al lado y deja el fútbol profesional, tal y como ha anunciado el mismo jugador a través de sus redes sociales. El jugador catalán, quién militaba en las filas del FC Cartagena, cuelga las botas con un emotivo reportaje en el que se muestran algunos de sus mejores momentos que ha vivido en sus diferentes equipos.\n"
+		   	String titulo4="Alberto De la Bella anuncia su retirada del futbol profesional";
+		   	String subTitulo4="El lateral zurdo, ex de la Real Sociedad y ahora en el Cartagena, cuelga las botas a los 36 anos";
+		   	String texto4="Una de las muchas leyendas que ha tenido la Real Sociedad,Alberto de la Bella, da un paso al lado y deja el futbol profesional, tal y como ha anunciado el mismo jugador a traves de sus redes sociales. El jugador catalan, quien militaba en las filas del FC Cartagena, cuelga las botas con un emotivo reportaje en el que se muestran algunos de sus mejores momentos que ha vivido en sus diferentes equipos.\n"
 		   			+ "\n"
-		   			+ "En el vídeo, De la Bella, agradece no sólo a todos los aficionados, sino también, a todos y cada uno de los entrenadores y compañeros que ha tenido a lo largo de su vida deportiva. El jugador ha disputado, aproximadamente, la cifra de 300 partidos en el fútbol profesional, con un total de 22.155 minutos, aportando un total de 9 goles. Donde más partidos ha jugado, y donde más temporadas ha militado, ha sido en la Real Sociedad, club en el que más veces ha lucido la camiseta. En total han sido 6 equipos en los que ha defendido los colores, en las últimas dos temporadas, en el FC Cartagena."
+		   			+ "En el video, De la Bella, agradece no solo a todos los aficionados, sino tambien, a todos y cada uno de los entrenadores y companeros que ha tenido a lo largo de su vida deportiva. El jugador ha disputado, aproximadamente, la cifra de 300 partidos en el futbol profesional, con un total de 22.155 minutos, aportando un total de 9 goles. Donde mas partidos ha jugado, y donde mas temporadas ha militado, ha sido en la Real Sociedad, club en el que mas veces ha lucido la camiseta. En total han sido 6 equipos en los que ha defendido los colores, en las ultimas dos temporadas, en el FC Cartagena."
 		   			+ "\n"
-		   			+ "Con los albinegros ha jugado dos temporadas, disputando un total de 53 partidos, sumando un total de 2.937 minutos, aportando un gol fundamental para la salvación del cuadro albinegro. Su tanto ante el Málaga en la temporada 2020/2021, le permitió al Efesé sumar los tres puntos en su pelea por la permanencia.\n"
+		   			+ "Con los albinegros ha jugado dos temporadas, disputando un total de 53 partidos, sumando un total de 2.937 minutos, aportando un gol fundamental para la salvacion del cuadro albinegro. Su tanto ante el Malaga en la temporada 2020/2021, le permitio al Efese sumar los tres puntos en su pelea por la permanencia.\n"
 		   			+ "\n"
-		   			+ "Finalmente, y después de algunas muchas temporadas, Alberto de la Bella, decide dejar a un lado la élite del fútbol profesional.";
+		   			+ "Finalmente, y despues de algunas muchas temporadas, Alberto de la Bella, decide dejar a un lado la elite del futbol profesional.";
 	    
-		   	Noticia no4 =new Noticia(titulo4, subTitulo4, texto4, "ÁLVARO PRIAN", "MARCA", UtilDate.newDate(year,month+1,3));
+		   	Noticia no4 =new Noticia(titulo4, subTitulo4, texto4, "aLVARO PRIAN", "MARCA", UtilDate.newDate(year,month+1,3));
 		   	db.persist(no4);
 		   	
-		    Event ev1=new Event(1, "Atlético de Madrid-Athletic de Bilbao", UtilDate.newDate(year,month,17), atleticoDeMadrid, atlheticDeBilbao);
+		    Event ev1=new Event(1, "Atletico de Madrid-Athletic de Bilbao", UtilDate.newDate(year,month,17), atleticoDeMadrid, atlheticDeBilbao);
 			Event ev2=new Event(2, "Elche-Barcelona", UtilDate.newDate(year,month,17), elche, barcelona);
 			Event ev3=new Event(3, "Getafe-Celta de Vigo", UtilDate.newDate(year,month,17), getafe, celtaDeVigo);
-			Event ev4=new Event(4, "Alavés-Osasuna", UtilDate.newDate(year,month,17), alaves, osasuna);
+			Event ev4=new Event(4, "Alaves-Osasuna", UtilDate.newDate(year,month,17), alaves, osasuna);
 			Event ev5=new Event(5, "Espanyol-Villareal", UtilDate.newDate(year,month,17), espanyol, villareal);
 			Event ev6=new Event(6, "Granada-Sevilla", UtilDate.newDate(year,month,17), granada, sevilla);
 			Event ev7=new Event(7, "Mallorca-Valencia", UtilDate.newDate(year,month,17), mallorca, valencia);
-			Event ev8=new Event(8, "Cádiz-Rayo Vallecano", UtilDate.newDate(year,month,17), cadiz, rayoVallecano);
+			Event ev8=new Event(8, "Cadiz-Rayo Vallecano", UtilDate.newDate(year,month,17), cadiz, rayoVallecano);
 			Event ev9=new Event(9, "Real Betis-Levante", UtilDate.newDate(year,month,17), realBetis, levante);
 			Event ev10=new Event(10, "Real Sociedad-Real Madrid", UtilDate.newDate(year,month,17), realSociedad, realMadrid);
 
-			Event ev11=new Event(11, "Atlético de Madrid-Athletic de Bilbao", UtilDate.newDate(year,month,1), atleticoDeMadrid, atlheticDeBilbao);
+			Event ev11=new Event(11, "Atletico de Madrid-Athletic de Bilbao", UtilDate.newDate(year,month,1), atleticoDeMadrid, atlheticDeBilbao);
 			Event ev12=new Event(12, "Elche-Barcelona", UtilDate.newDate(year,month,1), elche, barcelona);
 			Event ev13=new Event(13, "Getafe-Celta de Vigo", UtilDate.newDate(year,month,1), getafe, celtaDeVigo);
-			Event ev14=new Event(14, "Alavés-Osasuna", UtilDate.newDate(year,month,1), alaves, osasuna);
+			Event ev14=new Event(14, "Alaves-Osasuna", UtilDate.newDate(year,month,1), alaves, osasuna);
 			Event ev15=new Event(15, "Espanyol-Villareal", UtilDate.newDate(year,month,1), espanyol, villareal);
 			Event ev16=new Event(16, "Granada-Sevilla", UtilDate.newDate(year,month,1), granada, sevilla);
 			
 
 			Event ev17=new Event(17, "Mallorca-Valencia", UtilDate.newDate(year,month+1,28), mallorca, valencia);
-			Event ev18=new Event(18, "Cádiz-Rayo Vallecano", UtilDate.newDate(year,month+1,28), cadiz, rayoVallecano);
+			Event ev18=new Event(18, "Cadiz-Rayo Vallecano", UtilDate.newDate(year,month+1,28), cadiz, rayoVallecano);
 			Event ev19=new Event(19, "Real Betis-Levante", UtilDate.newDate(year,month+1,28), realBetis, levante);
 			Event ev20=new Event(20, "Real Sociedad-Real Madrid", UtilDate.newDate(year,month+1,28), realSociedad, realMadrid);
 			Event ev21=new Event(21, "Betis-Real Madrid", UtilDate.newDate(year,month-2,28),realBetis, realMadrid);
@@ -165,16 +165,16 @@ public class DataAccess  {
 			Question q9;
 			
 			
-			q7=ev21.addQuestion("¿Habrá goles en la primera parte?",2);
-			q8=ev21.addQuestion("¿Habrá goles en la segunda parte?",2);
-			q9=ev22.addQuestion("¿Habrá goles en la segunda parte?",2);
+			q7=ev21.addQuestion("¿Habra goles en la primera parte?",2);
+			q8=ev21.addQuestion("¿Habra goles en la segunda parte?",2);
+			q9=ev22.addQuestion("¿Habra goles en la segunda parte?",2);
 			if (Locale.getDefault().equals(new Locale("es"))) {
-				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
-				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
-				q3=ev11.addQuestion("¿Quién ganará el partido?",1);
-				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
-				q5=ev17.addQuestion("¿Quién ganará el partido?",1);
-				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
+				q1=ev1.addQuestion("¿Quien ganara el partido?",1);
+				q2=ev1.addQuestion("¿Quien metera el primer gol?",2);
+				q3=ev11.addQuestion("¿Quien ganara el partido?",1);
+				q4=ev11.addQuestion("¿Cuantos goles se marcaran?",2);
+				q5=ev17.addQuestion("¿Quien ganara el partido?",1);
+				q6=ev17.addQuestion("¿Habra goles en la primera parte?",2);
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
 				q1=ev1.addQuestion("Who will win the match?",1);
@@ -221,14 +221,14 @@ public class DataAccess  {
 			q7.addPronostico(p9);
 			q8.addPronostico(p10);
 			q9.addPronostico(p11);
-			final String CONTRASEÑA = "12345";
-			Usuario admin= new Usuario("Alfredo",CONTRASEÑA,null,true,null);
-			Usuario user= new Usuario("User1",CONTRASEÑA,"1010293833",false,"usuariomasguapo@gmail.com");
-			Usuario user2= new Usuario("User2",CONTRASEÑA,"1010294833",false,"usuariamasguapa@gmail.com");
-			Usuario admi1= new Usuario("Silvia",CONTRASEÑA,null,true,null);
-			Usuario admi2= new Usuario("Yubo",CONTRASEÑA,null,true,null);
-			Usuario admi3= new Usuario("Carlos",CONTRASEÑA,null,true,null);
-			Usuario admi4= new Usuario("Jaime",CONTRASEÑA,null,true,null);
+			final String CONTRA = "12345";
+			Usuario admin= new Usuario("Alfredo",CONTRA,null,true,null);
+			Usuario user= new Usuario("User1",CONTRA,"1010293833",false,"usuariomasguapo@gmail.com");
+			Usuario user2= new Usuario("User2",CONTRA,"1010294833",false,"usuariamasguapa@gmail.com");
+			Usuario admi1= new Usuario("Silvia",CONTRA,null,true,null);
+			Usuario admi2= new Usuario("Yubo",CONTRA,null,true,null);
+			Usuario admi3= new Usuario("Carlos",CONTRA,null,true,null);
+			Usuario admi4= new Usuario("Jaime",CONTRA,null,true,null);
 	
 			
 			db.persist(ligaSantander);
@@ -480,7 +480,7 @@ public class DataAccess  {
 			f = new Entrada(d,false,u,true,false);
 			u.setFecha(d);
 		}
-		else if(i<5) f = new Entrada(d,false,u,false,false);   //no están bloqueados
+		else if(i<5) f = new Entrada(d,false,u,false,false);   //no estan bloqueados
 		else f=new Entrada(d,false,u,true,false); //estaban bloqueados de antes
 		db.persist(f);
 		u.addFechas(f);
@@ -606,7 +606,7 @@ public class DataAccess  {
 	}
 	
 	
-	public void añadirApuesta(Usuario user,Bet ap) {
+	public void anadirApuesta(Usuario user,Bet ap) {
 		db.getTransaction().begin();
 		Usuario us=db.find(Usuario.class, user.getUserName());
 		us.añadirApuesta(ap);
@@ -635,7 +635,7 @@ public class DataAccess  {
 		if(d<0)return 2;		
 		Bet b = this.guardarDatosApuesta(apuesta,u, p);		
 		System.out.println("APUESTA   "+ b);		
-		this.añadirApuesta(u,b);
+		this.anadirApuesta(u,b);
 		this.calcularPorcentajePronostico(q);
 		return 0;	
 	}
@@ -991,7 +991,7 @@ public class DataAccess  {
 		Liga liga= new Liga(nombre, numEquipos);
 		db.persist(liga);
 		db.getTransaction().commit();
-		System.out.println(">> DataAccess: crearLiga=> Nombre= "+nombre +" Numero máximo de equipos " + numEquipos);
+		System.out.println(">> DataAccess: crearLiga=> Nombre= "+nombre +" Numero maximo de equipos " + numEquipos);
 	}
 	//gggg
 	public void anadirEquipoALiga(String nombreEquipo, Liga liga) throws TeamAlreadyExistsException, MaximumNumberOfTeamsReached {
