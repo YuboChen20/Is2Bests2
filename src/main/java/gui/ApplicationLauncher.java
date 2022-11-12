@@ -12,6 +12,7 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;
+import businessLogic.BLFactory;
 
 public class ApplicationLauncher {  
 	
@@ -32,7 +33,7 @@ public class ApplicationLauncher {
 		MainGUI a=new MainGUI();
 		a.setVisible(true);
 
-
+/*
 		try {
 			
 			BLFacade appFacadeInterface;
@@ -72,7 +73,7 @@ public class ApplicationLauncher {
 			} 
 			/*if (c.getDataBaseOpenMode().equals("initialize")) 
 				appFacadeInterface.initializeBD();
-				*/
+				
 			MainGUI.setBussinessLogic(appFacadeInterface);
 
 		
@@ -84,7 +85,12 @@ public class ApplicationLauncher {
 			
 			System.out.println("Error in ApplicationLauncher: "+e.toString());
 		}
+*/
 		//a.pack();
+		
+		int isLocal =	1;
+		BLFacade	appFacadeInterface =	new BLFactory().getBusinessLogicFactory(isLocal);
+		MainGUI.setBussinessLogic(appFacadeInterface);
 
 
 	}
