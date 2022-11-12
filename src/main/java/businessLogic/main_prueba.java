@@ -12,7 +12,7 @@ public class main_prueba  {
 	public static void main(String[]	args)	{
 		//	obtener el	objeto Facade	local
 		int isLocal =	1;
-		BLFacade	blFacade =	new BLFacadeImplementation();
+		BLFacade	blFacade =	new BLFactory().getBusinessLogicFactory(isLocal);
 		SimpleDateFormat sdf =new SimpleDateFormat("dd/MM/yyyy");
 		Date date;
 		try {
