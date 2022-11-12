@@ -99,19 +99,6 @@ public class BLFacadeImplementation  implements BLFacade {
 		return qry;
    }
 	
-	/**
-	 * This method invokes the data access to retrieve the events of a given date 
-	 * 
-	 * @param date in which events are retrieved
-	 * @return collection of events
-	 */
-    @WebMethod	
-	public Vector<Event> getEvents(Date date)  {
-		dbManager.open(false);
-		Vector<Event>  events=dbManager.getEvents(date);
-		dbManager.close();
-		return events;
-	}
 
     
 	/**
@@ -461,5 +448,27 @@ public class BLFacadeImplementation  implements BLFacade {
 			dbManager.close();
 		 	return equipos;
 		}
+
+		@Override
+		public ExtendedIterator<Event> getEventsIterator(Date date) {
+			return new ExtendedIteratorEvents(this.getEvents(date));
+		}
+		 
+		
+		/**
+		 * This method invokes the data access to retrieve the events of a given date 
+		 * 
+		 * @param date in which events are retrieved
+		 * @return collection of events
+		 */
+	    @WebMethod	
+		public Vector<Event> getEvents(Date date)  {
+			dbManager.open(false);
+			Vector<Event>  events=dbManager.getEvents(date);
+			dbManager.close();
+			return events;
+		}
+		
+		
 }
 
