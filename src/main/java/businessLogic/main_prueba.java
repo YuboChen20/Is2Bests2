@@ -3,9 +3,18 @@ package businessLogic;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import domain.Event;
+
+import domain.UserAdapter;
+import domain.Usuario;
+
 
 public class main_prueba  {
 	
@@ -34,8 +43,32 @@ public class main_prueba  {
 				e =	i.next();
 				System.out.println(e.toString());
 			}
+			
+			
+			
 		}catch (ParseException	e1)	{
 			System.out.println("Problems	with	date??	" +	"17/12/2020");
 		}
+		
+		try {
+			
+		Usuario u=blFacade.getUser(new Usuario("User1","12345","1010293833",false,"usuariomasguapo@gmail.com"));
+		ArrayList s=(ArrayList) blFacade.getBet(u);
+
+		UserAdapter model=new UserAdapter(s);
+		
+		JFrame j=new JFrame();
+		JTable table = new JTable(model);
+		j.add(new JScrollPane(table));
+
+		 j.setTitle(u.getUserName()+"'s bets");
+		 j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		 j.pack();
+		 j.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+		
 	}
 } 

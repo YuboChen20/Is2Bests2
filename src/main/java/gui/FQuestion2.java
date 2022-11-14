@@ -366,11 +366,20 @@ public class FQuestion2 extends JFrame {
 				a.setVisible(true);	
 			}
 		});
-		
-		
-		
 		btnVerPerfil.setBounds(662, 0, 123, 23);
 		getContentPane().add(btnVerPerfil);
+		
+		JButton Tabla = new JButton(ResourceBundle.getBundle("Etiquetas").getString("FQuestion2.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+		Tabla.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame a = new WindowTable(user);
+				a.setVisible(true);
+				
+			}
+		});
+		
+		Tabla.setBounds(414, 0, 91, 23);
+		getContentPane().add(Tabla);
 		
 		JLabel lblApuestaMinima = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("FQuestion2.lblApuestaMinima.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
 		lblApuestaMinima.setBounds(29, 333, 156, 14);
@@ -477,6 +486,8 @@ public class FQuestion2 extends JFrame {
 		btnNoticia.setBounds(0, 0, 129, 23);
 		
 		getContentPane().add(btnNoticia);
+		
+		
 		btnNoticia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnNoticia_actionPerformed(e);
